@@ -1,0 +1,4 @@
+Bundle-Name: Social Driver Portlet
+Bundle-SymbolicName: com.liferay.socialdriver
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.socialdriver.constants

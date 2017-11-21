@@ -1,0 +1,4 @@
+Bundle-Name: fmconsole
+Bundle-SymbolicName: com.liferay.devhacks
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.devhacks.constants
