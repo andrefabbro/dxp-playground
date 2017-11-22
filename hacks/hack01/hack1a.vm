@@ -1,0 +1,8 @@
+#set ($userLocalService = $serviceLocator.findService("com.liferay.portal.kernel.service.UserLocalService"))
+
+<em>Demo 1: Exemplo super simples de um Webcontent</em>
+<h1><img src="/image/layout_set_logo?img_id=30513&t=1507667687582" width="50">
+	&nbsp;Ol&aacute;, Liferay!
+</h1>
+
+<h3>Quantidade de usu&aacute;rios: $userLocalService.getUsersCount()</h3>

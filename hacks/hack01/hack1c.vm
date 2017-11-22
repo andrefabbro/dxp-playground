@@ -1,0 +1,52 @@
+#if ($request.lifecycle == "RENDER_PHASE")
+<em>Demo 3: Processo longo que não atrasa a renderização</em>
+
+<h1><img src="/image/layout_set_logo?img_id=30513&t=1507667687582" width="50">
+	&nbsp;Ol&aacute;, Liferay!
+</h1>
+
+<h3>Não demorou muito, certo?</h3>
+
+<div id="result">Processo em andamento...</div>
+
+<script type="text/javascript">
+  AUI().use("aui-base", "aui-io-plugin", "aui-io-request", function(A) {
+  
+	  var dirtyHTML = [
+	        '<div class="text-right user-tool-asset-addon-entries">',
+	        '<div class="journal-content-article">',
+	        '<div class="content-metadata-asset-addon-entries">',
+	        '</div>','</div>','</div>'
+	      ];
+		  
+      A.io.request(
+          '${request.resource-url}',
+          {
+              method : 'POST',
+              dataType : 'text/html',
+              data : {
+                  ${request.portlet-namespace}mvcPath : '/view.jsp'
+              },
+              on : {
+                  success : function(event, id, obj) {
+					  var responseData = this.get("responseData");
+					  dirtyHTML.forEach(function(entry) {
+					      responseData = responseData.replace(entry, '');
+					  });
+					  responseData = responseData.trim();
+					  var result = A.JSON.parse(responseData);
+					  document.getElementById('result').innerHTML = ('<code>Tempo: ' + result.time + 'ms</code>');
+                  }
+              }
+          });
+  });
+</script>
+
+#elseif ($request.lifecycle == "RESOURCE_PHASE")
+    ## long-running process that only runs if the resource URL is accessed
+    #set ($start = $dateUtil.newDate())
+    #foreach ($i in [1..30000000])
+    #end
+    #set ($elapsed = $dateUtil.newDate().getTime() - $start.getTime())
+    { "time" : $elapsed }
+#end

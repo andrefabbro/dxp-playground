@@ -1,0 +1,16 @@
+## Processo longo que bloqueia a renderizacao
+
+<em>Demo 2: Processo longo que atrasa a renderização por cerca de 10 segundos</em>
+
+<h1><img src="/image/layout_set_logo?img_id=30513&t=1507667687582" width="50">
+	&nbsp;Ol&aacute;, Liferay!
+</h1>
+
+## Processo longo
+
+#set ($start = $dateUtil.newDate())
+#foreach ($i in [1..30000000])
+#end
+#set ($elapsed = $dateUtil.newDate().getTime() - $start.getTime())
+
+<h3>Demora muuuito! (${elapsed}ms)</h3>

@@ -15,14 +15,10 @@
 <liferay-theme:defineObjects />
 <portlet:defineObjects />
 
-<p>
-	<b><liferay-ui:message key="fmconsole.caption"/></b>
-</p>
-
 <style type="text/css">
     #editor {
         position: relative;
-        width: 800px;
+        width: 900px;
         height: 400px;
     }
 </style>
@@ -30,11 +26,11 @@
 <portlet:resourceURL var="resourceURL">
 </portlet:resourceURL>
 
-<div class="row-fluid">
-    <div class="span3">
+<div class="row">
+    <div class="col-md-3">
 
         <label for="articleSelect">Select Article</label>
-        <select onchange="isDirty = true; lastchange=new Date().getTime();<portlet:namespace/>populateVars();" id="articleSelect">
+        <select style="font-size:12px" onchange="isDirty = true; lastchange=new Date().getTime();<portlet:namespace/>populateVars();" id="articleSelect">
             <option label="-- None --" name="-- None --" value="" ></option>
             <%
                 List<JournalArticle> articles = JournalArticleLocalServiceUtil.getArticles(scopeGroupId);
@@ -42,10 +38,10 @@
                     String articleId = article.getArticleId();
                     String articleTitle = article.getTitle(locale);
                     String structureId = article.getDDMStructureKey();
-                    String structureName = DDMStructureLocalServiceUtil.getStructure(20152, ClassNameLocalServiceUtil.getClassNameId(JournalArticle.class), structureId).getName(locale);
+                    double articleVersion = article.getVersion();
+                    String structureName = article.getDDMStructure().getName(locale);
 
-
-            %> <option label="<%=articleTitle%> (<%= structureName %>)" name="<%= articleId %>" value="<%= articleId %>" ></option> <%
+            %> <option label="<%=articleTitle%> <%=articleVersion%> (<%= structureName %>)" name="<%= articleId %>" value="<%= articleId %>" ></option> <%
             }
         %>
 
@@ -53,15 +49,17 @@
         <div id="vars"></div>
 
     </div>
-    <div class="span9">
+    <div class="col-md-9">
         <div id="theError"></div>
         <label for="editor">Template code</label>
         <div id="editor">some text</div>
-        <h2>Result:</h2>
-        <div id="theResult"></div>
+        
 
     </div>
 </div>
+
+<h2>Result:</h2>
+<div id="theResult"></div>
 
 <script type="text/javascript">
 
