@@ -6,8 +6,6 @@ ENV="$2"
 ## Clean and create a new DB instance
 init_db() {
 	
-	## docker run --name dxp-stg -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=lportalstg --publish 3307:3306 -d mysql --character-set-server=utf8 --collation-server=utf8_general_ci --lower-case-table-names=0
-	
 	echo "=============================="
 	echo "Creating database"
 	echo "=============================="
@@ -18,8 +16,7 @@ init_db() {
 
 ##
 ## Setup a new Liferay EE Bundle and apply the patch
-## Make sure that you have the last patch in your user home directory 
-## (~/.liferay/fix-packs/liferay-fix-pack-de-23-7010.zip)
+## Make sure that you have the last patch in your user home directory
 ## 
 init_bundle() {
 	echo "=============================="
@@ -31,7 +28,7 @@ init_bundle() {
 	LIFERAY_BUNDLE_PATH=$APP_SERVER_PATH/webapps/ROOT
 	WEB_XML_PATH=$LIFERAY_BUNDLE_PATH/WEB-INF
 	PATCHING_TOOL_FILE=patching-tool-2.0.7.zip
-	FIX_PACK_FILE=~/.liferay/fix-packs/liferay-fix-pack-de-31-7010.zip
+	FIX_PACK_FILE=~/.liferay/fix-packs/liferay-fix-pack-de-32-7010.zip
 	
 	# Re-creates the base bundle package
 	rm -rf bundles
