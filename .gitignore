@@ -56,6 +56,6 @@ test-results
 
 # Specific files that shoud be considered
 configs/local/deploy/activation-key-development.xml
-# modules/blade.rest
+modules/blade.rest
 
 
