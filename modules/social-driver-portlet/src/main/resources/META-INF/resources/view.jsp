@@ -310,7 +310,9 @@ function genStats() {
 	<h2>STATUS: IDLE</h2>
 </div>
 
-<%-- <%--<hr>--%>
+<!-- 
+
+<hr>
 <h2>Instructions</h2>
 
 <p>This portlet generates fake historical social activity on a Liferay Site. It uses <a
@@ -349,7 +351,7 @@ function genStats() {
 
 <p>7.  <strong>Next, login as admin, and make sure to enable Social Activity Recording</strong> by visiting Control Panel -> Social Activity and toggle the
 	   buttons next to Blogs Entry, Message Boards Message, and Wiki Page, and click <em>Save</em></p>
-</p>
+
 <p>8. Also, ensure that Workflow for Web Content is turned OFF (it is on by default when using the sevencogs sample sites) by visiting Control Panel -> Workflow Configuration and
 	 turn all settings to "Default: no workflow" and click Save.</p>
 <p>9. To begin creating fake blogs, click the "Start Blogs" button. Every 2 seconds this portlet will randomly choose to
@@ -401,6 +403,9 @@ you have a good amount of fake data, then generate stats using "GenStats".</p>
 <p>5. In the right-side portlet, configure it to display the <code>SOCIALDRIVER-ASSETLIST</code> article.  This article will show a list of all assets in the site, with a popularity score as well.  Clicking the article name will take you to the article, <b>if</b> you also add other pages to the site that contain the associated apps (e.g. a blogs portlet, wiki portlet, and message board portlet</p>
 <p>6. You can add other OOTB portlets to display the content, e.g. blogs aggregators, directories, and so forth.  Be creative.</p>
 <p>7. When you visit a fake user's profile, several pages have been added - most notably the "Expertise" page which shows a similar view, but scoped to that particular user's expertise.  So a good demo is to build an "experts" page, observe the expertise, click on a tag, then click on the expert in that tag,visit their profile, click on their name to send them an email, etc.</p>
-<p>8. The data isn't completely random - there are a few "preferred" tags that over time will grow larger and more popular, tags like liferay, portal, javaee, java, ldap, etc.  These can be found in the source code.</p> --%>
+<p>8. The data isn't completely random - there are a few "preferred" tags that over time will grow larger and more popular, tags like liferay, portal, javaee, java, ldap, etc.  These can be found in the source code.</p> 
+
+-->
+
 </body>
 

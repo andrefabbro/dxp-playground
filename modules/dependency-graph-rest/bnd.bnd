@@ -1,0 +1,4 @@
+Bundle-Name: Liferay Dependency Graph Rest
+Bundle-SymbolicName: com.liferay.dependency.graph.rest
+Bundle-Version: 1.0.0
+Liferay-Configuration-Path: /configuration

@@ -1,0 +1,4 @@
+Bundle-Name: echo-portlet
+Bundle-SymbolicName: com.liferay.websocket.example.echo
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.websocket.example.echo.constants
