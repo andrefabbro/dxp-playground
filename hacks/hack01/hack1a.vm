@@ -1,7 +1,7 @@
 #set ($userLocalService = $serviceLocator.findService("com.liferay.portal.kernel.service.UserLocalService"))
 
 <em>Demo 1: Exemplo super simples de um Webcontent</em>
-<h1><img src="/image/layout_set_logo?img_id=30513&t=1507667687582" width="50">
+<h1><img src="/image/layout_set_logo?img_id=20167&t=1511480876435" width="50">
 	&nbsp;Ol&aacute;, Liferay!
 </h1>
 

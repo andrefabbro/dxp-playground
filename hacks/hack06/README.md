@@ -1,4 +1,8 @@
+## Hack 06 - Proteger webservices
+
+```
 blade samples blade.rest
+```
 
 Search for CXF Endpoints
 Create a new CXFEndpoint publisher configuration providing a context path (e.g., /rest-test).
