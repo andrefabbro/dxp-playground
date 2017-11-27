@@ -61,8 +61,6 @@ blade server start
 
 Para executar em modo debug:
 
-Executar o portal usando:
-
 ```
 blade server start -d
 ```
