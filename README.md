@@ -64,3 +64,11 @@ Para executar em modo debug:
 ```
 blade server start -d
 ```
+
+Instalar os módulos:
+
+```
+cd modules/
+blade deploy
+```
+
