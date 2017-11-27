@@ -47,7 +47,22 @@ Incluir o patching tool versão 2.0.7 (```patching-tool-2.0.7.zip```) na pasta:
 ~/.liferay/patching-tool/
 ```
 
+Rodar o script para criação do ambiente:
 
+```
+./bootstrap.sh init
+```
 
+Executar o portal usando:
 
+```
+blade server start
+```
 
+Para executar em modo debug:
+
+Executar o portal usando:
+
+```
+blade server start -d
+```
