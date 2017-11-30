@@ -9,7 +9,7 @@
 ## Processo longo
 
 #set ($start = $dateUtil.newDate())
-#foreach ($i in [1..30000000])
+#foreach ($i in [1..15000000])
 #end
 #set ($elapsed = $dateUtil.newDate().getTime() - $start.getTime())
 

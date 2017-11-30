@@ -1,4 +1,5 @@
 #if ($request.lifecycle == "RENDER_PHASE")
+	
 <em>Demo 3: Processo longo que não atrasa a renderização</em>
 
 <h1><img src="/image/layout_set_logo?img_id=20167&t=1511480876435" width="50">
@@ -43,10 +44,12 @@
 </script>
 
 #elseif ($request.lifecycle == "RESOURCE_PHASE")
-    ## long-running process that only runs if the resource URL is accessed
+    
+	## long-running process that only runs if the resource URL is accessed
     #set ($start = $dateUtil.newDate())
-    #foreach ($i in [1..30000000])
+    #foreach ($i in [1..15000000])
     #end
     #set ($elapsed = $dateUtil.newDate().getTime() - $start.getTime())
     { "time" : $elapsed }
+
 #end
