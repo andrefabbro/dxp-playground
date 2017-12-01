@@ -1,6 +1,8 @@
 # Liferay DXP Hacks
 
-Esse repositório contém um conjunto de hacks para o Liferay DXP, com o objetivo de aprender um pouco mais sobre a plataforma em um nível mais baixo. Não deve ser usado em ambiente produtivo já que não foi apropriadamente testado.
+Esse repositório contém um conjunto de hacks para o Liferay DXP, com o objetivo de aprender um pouco mais sobre a plataforma. Não deve ser usado em ambiente produtivo já que não foi apropriadamente testado.
+
+Baseado em [A set of random hacks for Liferay 6.2 and Liferay 7](https://github.com/jamesfalkner/lr-hacks)
 
 Verificar na pasta hacks cada um dos exemplos:
 
