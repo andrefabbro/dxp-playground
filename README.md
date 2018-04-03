@@ -1,6 +1,6 @@
 # Liferay DXP Hacks
 
-Esse repositório contém um conjunto de hacks para o Liferay DXP, com o objetivo de aprender um pouco mais sobre a plataforma. Não deve ser usado em ambiente produtivo já que não foi apropriadamente testado.
+Esse repositório contém um conjunto de hacks para o Liferay DXP, apresentado no Liferay Symposium SP em 2017, com o objetivo de aprender um pouco mais sobre a plataforma. Não deve ser usado em ambiente produtivo já que não foi apropriadamente testado.
 
 Baseado em [A set of random hacks for Liferay 6.2 and Liferay 7](https://github.com/jamesfalkner/lr-hacks)
 
@@ -19,11 +19,15 @@ Verificar na pasta hacks cada um dos exemplos:
 
 Cada hack contém seu próprio arquivo README contendo instruções.
 
+A apresentação pode ser encontrada em:
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/vh8vCaC31QI/0.jpg)](https://youtu.be/vh8vCaC31QI)
+
 ## Setup do Ambiente
 
 Instalar última versão do Docker: https://www.docker.com/
 
-Instalar a blade: https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-0/blade-cli
+Instalar o blade tools: https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-0/blade-cli
 
 Incluir uma licença válida na pasta:
 
