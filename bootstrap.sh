@@ -27,8 +27,7 @@ init_bundle() {
 	APP_SERVER_PATH=./bundles/tomcat-8.0.32
 	LIFERAY_BUNDLE_PATH=$APP_SERVER_PATH/webapps/ROOT
 	WEB_XML_PATH=$LIFERAY_BUNDLE_PATH/WEB-INF
-	PATCHING_TOOL_FILE=patching-tool-2.0.7.zip
-	FIX_PACK_FILE=~/.liferay/fix-packs/liferay-fix-pack-de-32-7010.zip
+	FIX_PACK_FILE=~/.liferay/fix-packs/liferay-fix-pack-de-48-7010.zip
 	
 	# Re-creates the base bundle package
 	rm -rf bundles
@@ -38,13 +37,6 @@ init_bundle() {
 	
 	# Removes the old version of LCS plugin
 	rm -rf ./bundles/osgi/marketplace/Liferay\ Connected\ Services\ Client.lpkg
-	
-	# Update the patching tool
-	rm -rf bundles/patching-tool
-	cp ~/.liferay/patching-tool/$PATCHING_TOOL_FILE bundles/
-	cd bundles/ && unzip $PATCHING_TOOL_FILE && cd ../
-	rm -rf bundles/$PATCHING_TOOL_FILE
-	./bundles/patching-tool/patching-tool.sh auto-discovery
 	
 	# Copy and Install Liferay Patch
 	cp $FIX_PACK_FILE bundles/patching-tool/patches
