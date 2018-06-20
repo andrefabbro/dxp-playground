@@ -9,9 +9,9 @@ init_db() {
 	echo "=============================="
 	echo "Creating database"
 	echo "=============================="
-	docker stop dxp || true
-	docker rm dxp || true
-	docker run --name dxp -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=lportal --publish 3306:3306 -d mysql --character-set-server=utf8 --collation-server=utf8_general_ci --lower-case-table-names=0
+	docker stop dxp-playground || true
+	docker rm dxp-playground || true
+	docker run --name dxp-playground -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=lportal --publish 3306:3306 -d mysql:5.6 --character-set-server=utf8 --collation-server=utf8_general_ci --lower-case-table-names=0
 }
 
 ##
