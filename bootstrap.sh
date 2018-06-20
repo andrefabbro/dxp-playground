@@ -24,9 +24,6 @@ init_bundle() {
 	echo "=============================="
 	
 	# Set the common variables
-	APP_SERVER_PATH=./bundles/tomcat-8.0.32
-	LIFERAY_BUNDLE_PATH=$APP_SERVER_PATH/webapps/ROOT
-	WEB_XML_PATH=$LIFERAY_BUNDLE_PATH/WEB-INF
 	FIX_PACK_FILE=~/.liferay/fix-packs/liferay-fix-pack-de-48-7010.zip
 	
 	# Re-creates the base bundle package
